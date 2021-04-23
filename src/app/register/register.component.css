@@ -1,0 +1,16 @@
+#con{
+    padding: 30px;
+    margin-top: 100px;
+    margin-left:400px;
+    width: 700px;
+    border-radius: 20px;
+    border:20px solid brown;
+
+}
+#c1{
+    margin: 70px;
+    background-color: cadetblue;
+}
+p{
+    color: cornflowerblue;
+}
