@@ -1,13 +1,86 @@
-<div class="container bg-primary"  >
-   <h2  style="text-align: center; padding: 40px; text-decoration: underline;">Virtual Workshop Registration form</h2>
-  </div>
-  <hr>
-  <div class="container">
-      <p>join the 3 day web developemt Workshop</p>
-      <p>and become hireable freelancer</p>
-      <p>participation fee $200</p>
-      <p>limited slots ...reserve yours now</p>
-  </div>
+<div class="container-fluid bg-primary">
+    <h2 style="text-align: center; padding: 40px; text-decoration: underline;">Virtual Workshop Registration form</h2>
+</div>
+<hr>
+<div class="container">
+    <div class="row" >
+        <div class="col-6" style="border: 1px solid black;">
+            <p>join the 3 day web developemt Workshop</p>
+            <p>and become hireable freelancer</p>
+            <p>participation fee $200</p>
+            <p>limited slots ...reserve yours now</p>
+        </div>
+        <div class="col-6" style="border: 1px solid black;">
+            <p>join the 3 day web developemt Workshop</p>
+            <p>and become hireable freelancer</p>
+            <p>participation fee $200</p>
+            <p>limited slots ...reserve yours now</p>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <label>Please rate your web development skilss</label>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="checkbox">
+                <label><input type="checkbox" value="">i dont have any idea at all</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">i am new in webdevelopment</label>
+              </div>
+              <div class="checkbox ">
+                <label><input type="checkbox" value="" >I have watched tutorials online</label>
+              </div> 
+              <div class="checkbox ">
+                <label><input type="checkbox" value="" >I have watched tutorials online</label>
+              </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <label for="">I would liked tolearn about following</label>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="checkbox">
+                <label><input type="checkbox" value="">HTML</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Java script</label>
+              </div>
+              <div class="checkbox ">
+                <label><input type="checkbox" value="" >Database</label>
+              </div> 
+              <div class="checkbox ">
+                <label><input type="checkbox" value="" >Rudy and rails</label>
+              </div>
+              <div class="checkbox ">
+                <label><input type="checkbox" value="" >Devops</label>
+              </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="checkbox">
+                <label><input type="checkbox" value="">CS</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">PHP</label>
+              </div>
+              <div class="checkbox ">
+                <label><input type="checkbox" value="" >Wordpress</label>
+              </div> 
+              <div class="checkbox ">
+                <label><input type="checkbox" value="" >Python</label>
+              </div>
+              <div class="checkbox ">
+                <label><input type="checkbox" value="" >Web security</label>
+              </div>
+        </div>
+    </div>
+</div>
 
 <div class="container bg-warning" id="con">
     <h4 class="display-4" style="text-align: center;">Form</h4>
@@ -27,8 +100,8 @@
         <div class="form-group">
             <label>Phone</label>
             <input type="tel" #phone='ngModel' pattern="^\d{10}$" required
-                [class.is-invalid]="phone.invalid && phone.touched" name="email" name="phone"
-                [(ngModel)]='user1.phone' class="form-control">
+                [class.is-invalid]="phone.invalid && phone.touched" name="email" name="phone" [(ngModel)]='user1.phone'
+                class="form-control">
             <!-- <small class="text-danger" [class.d-none]='phone.valid || phone.untouched'>Phone number is required and must be of 10 digits</small> -->
             <div *ngIf='phone.errors && (phone.invalid && phone.touched)'>
                 <small class="text-danger" *ngIf='phone.errors.required'>Phone number is required </small>
@@ -37,111 +110,114 @@
         </div>
 
         <!-- <div ngModelaGroup="Address"> -->
-            <div class="form-group">
-                <label>Address </label>
-                <label>Street </label>
-                <input type="text" #street='ngModel' name="street" [class.is-invalid]="street.invalid && street.touched"
-                    required [(ngModel)]='user1.street' class="form-control">
-                <small class="text-danger" [class.d-none]="street.valid || street.untouched">This is required</small>
-            </div>     
-            <div class="form-group">
-                <label>City </label>
-                <input type="text" #city='ngModel' name="city" [class.is-invalid]="city.invalid && city.touched"
-                    required [(ngModel)]='user1.city' class="form-control">
-                <small class="text-danger" [class.d-none]="city.valid || city.untouched">This is required</small>
-            </div>  
-            <div class="form-group">
-                <label>state </label>
-                <input type="text" #state='ngModel' name="state" [class.is-invalid]="state.invalid && state.touched"
-                    required [(ngModel)]='user1.state' class="form-control">
-                <small class="text-danger" [class.d-none]="state.valid || state.untouched">This is required</small>
-            </div>  
-            <div class="form-group">
-                <label>Postal code </label>
-                <input type="text" #code='ngModel' name="code" [class.is-invalid]="code.invalid && code.touched"
-                    required [(ngModel)]='user1.code' class="form-control">
-                <small class="text-danger" [class.d-none]="code.valid || code.untouched">This is required</small>
-            </div>   
-            <div class="form-group">
-                <label>Occupation </label>
-                <input type="text" #occupation='ngModel' name="occupation" [class.is-invalid]="occupation.invalid && occupation.touched"
-                    required [(ngModel)]='user1.occupation' class="form-control">
-                <small class="text-danger" [class.d-none]="occupation.valid || occupation.untouched">This is required</small>
-            </div>  
-            <div class="form-group">
-                <label>Company Name </label>
-                <input type="text" #company='ngModel' name="company" [class.is-invalid]="company.invalid && company.touched"
-                    required [(ngModel)]='user1.company' class="form-control">
-                <small class="text-danger" [class.d-none]="company.valid || company.untouched">This is required</small>
-            </div>  
-            <div class="form-group">
-                <label>Job Position Title </label>
-                <input type="text" #job='ngModel' name="job" [class.is-invalid]="job.invalid && job.touched"
-                    required [(ngModel)]='user1.job' class="form-control">
-                <small class="text-danger" [class.d-none]="job.valid || job.untouched">This is required</small>
-            </div> 
-            
-            <div class="form-gropup">
-                <label >Workshop Dates (2020)</label>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input"  #date='ngModel' name="date" [(ngModel)]='user1.date'>
-                    <label for="" class="form-check-lable">May 1-3</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input"  #date='ngModel' name="date" [(ngModel)]='user1.date'>
-                    <label for="" class="form-check-lable">June 1-3</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input"  #date='ngModel' name="date" [(ngModel)]='user1.date'>
-                    <label for="" class="form-check-lable">july 1-3</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input"  #date='ngModel' name="date" [(ngModel)]='user1.date'>
-                    <label for="" class="form-check-lable">may 15-18</label>
-                </div>
-            
-            </div>
-            <div class="form-group">
-                <label >Workshop Payment</label>
-                <div class="form-check">
-                    <input type="radio" class="form-check-input"  #pay='ngModel' name="pay" [(ngModel)]='user1.pay'>
-                    <label for="" class="form-check-lable">Participation fee $200</label>
-                </div>
+        <div class="form-group">
+            <label>Address </label>
+            <label>Street </label>
+            <input type="text" #street='ngModel' name="street" [class.is-invalid]="street.invalid && street.touched"
+                required [(ngModel)]='user1.street' class="form-control">
+            <small class="text-danger" [class.d-none]="street.valid || street.untouched">This is required</small>
+        </div>
+        <div class="form-group">
+            <label>City </label>
+            <input type="text" #city='ngModel' name="city" [class.is-invalid]="city.invalid && city.touched" required
+                [(ngModel)]='user1.city' class="form-control">
+            <small class="text-danger" [class.d-none]="city.valid || city.untouched">This is required</small>
+        </div>
+        <div class="form-group">
+            <label>state </label>
+            <input type="text" #state='ngModel' name="state" [class.is-invalid]="state.invalid && state.touched"
+                required [(ngModel)]='user1.state' class="form-control">
+            <small class="text-danger" [class.d-none]="state.valid || state.untouched">This is required</small>
+        </div>
+        <div class="form-group">
+            <label>Postal code </label>
+            <input type="text" #code='ngModel' name="code" [class.is-invalid]="code.invalid && code.touched" required
+                [(ngModel)]='user1.code' class="form-control">
+            <small class="text-danger" [class.d-none]="code.valid || code.untouched">This is required</small>
+        </div>
+        <div class="form-group">
+            <label>Occupation </label>
+            <input type="text" #occupation='ngModel' name="occupation"
+                [class.is-invalid]="occupation.invalid && occupation.touched" required [(ngModel)]='user1.occupation'
+                class="form-control">
+            <small class="text-danger" [class.d-none]="occupation.valid || occupation.untouched">This is
+                required</small>
+        </div>
+        <div class="form-group">
+            <label>Company Name </label>
+            <input type="text" #company='ngModel' name="company" [class.is-invalid]="company.invalid && company.touched"
+                required [(ngModel)]='user1.company' class="form-control">
+            <small class="text-danger" [class.d-none]="company.valid || company.untouched">This is required</small>
+        </div>
+        <div class="form-group">
+            <label>Job Position Title </label>
+            <input type="text" #job='ngModel' name="job" [class.is-invalid]="job.invalid && job.touched" required
+                [(ngModel)]='user1.job' class="form-control">
+            <small class="text-danger" [class.d-none]="job.valid || job.untouched">This is required</small>
+        </div>
 
+        <div class="form-gropup">
+            <label>Workshop Dates (2020)</label>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" #date='ngModel' name="date" [(ngModel)]='user1.date'>
+                <label for="" class="form-check-lable">May 1-3</label>
             </div>
-            <div class="form-group">
-                <label >Payment method</label>
-                <select name="method" id="" class="custom-select" [(ngModel)]='user1.method'>
-                    <option value=""></option>
-                    <option *ngFor="let method of methods" value="{{method}}">{{method}}</option>
-                </select>
-
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" #date='ngModel' name="date" [(ngModel)]='user1.date'>
+                <label for="" class="form-check-lable">June 1-3</label>
             </div>
-            <div class="form-group">
-                <label for="comment">Any additional comments or information ?</label>
-                <textarea name="comment" class="form-control" rows="5"  [(ngModel)]='user1.comment' placeholder="add your comments here...."></textarea>
-              </div>
-
-              <div class="form-gropup">
-            <label >How did you find these</label>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">    Facebook</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="">     Instagram</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="" >    Search engine</label>
-                  </div>
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="" >    Referal</label>
-                  </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" #date='ngModel' name="date" [(ngModel)]='user1.date'>
+                <label for="" class="form-check-lable">july 1-3</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" #date='ngModel' name="date" [(ngModel)]='user1.date'>
+                <label for="" class="form-check-lable">may 15-18</label>
             </div>
 
-         <!-- </div> -->
+        </div>
+        <div class="form-group">
+            <label>Workshop Payment</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" #pay='ngModel' name="pay" [(ngModel)]='user1.pay'>
+                <label for="" class="form-check-lable">Participation fee $200</label>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label>Payment method</label>
+            <select name="method" id="" class="custom-select" [(ngModel)]='user1.method'>
+                <option value=""></option>
+                <option *ngFor="let method of methods" value="{{method}}">{{method}}</option>
+            </select>
+
+        </div>
+        <div class="form-group">
+            <label for="comment">Any additional comments or information ?</label>
+            <textarea name="comment" class="form-control" rows="5" [(ngModel)]='user1.comment'
+                placeholder="add your comments here...."></textarea>
+        </div>
+
+        <div class="form-gropup">
+            <label>How did you find these</label>
+            <div class="checkbox">
+                <label><input type="checkbox" value=""> Facebook</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value=""> Instagram</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value=""> Search engine</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value=""> Referal</label>
+            </div>
+        </div>
+
+        <!-- </div> -->
 
 
         <button class="btn btn-primary" [disabled]='!form1.form.valid'>Register</button>
-        
+
     </form>
 </div>
